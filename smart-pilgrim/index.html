@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thiruvannamalai Smart Pilgrim</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="page" content="home">
+<meta name="description" content="Travel and temple guide for visitors to Arunachaleswarar Temple: rides, rooms, food, Annadanam, store and an offline map.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Noto+Serif+Tamil:wght@600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>try{var t=JSON.parse(localStorage.getItem("sp:theme"));if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<div id="app-header" style="min-height:65px"></div>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero__content">
+      <p class="hero__ta" lang="ta">திருவண்ணாமலை</p>
+      <h1 class="hero__title" id="hero-title"><span>Thiruvannamalai</span><span>Smart Pilgrim</span></h1>
+      <p class="hero__sub">Your complete travel and temple guide for Arunachaleswarar Temple</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary btn--lg" href="#modules">Plan your visit</a>
+        <a class="btn btn--soft btn--lg" href="#calendar">Festival calendar</a>
+        <a class="btn btn--soft btn--lg" href="#girivalam">Girivalam guide</a>
+      </div>
+    </div>
+    <div class="hero__art" id="heroArt" data-photo="" role="img" aria-label="Photo of the East Gopuram of Arunachaleswarar Temple at sunset"></div>
+  </section>
+
+  <section class="modules" id="modules" aria-label="Services">
+    <div class="container">
+      <div class="modules__grid" id="tiles"></div>
+      <div class="glance" id="glance"></div>
+    </div>
+  </section>
+
+  <section class="section" id="explore" aria-labelledby="explore-h">
+    <div class="container">
+      <div class="section__head"><p class="eyebrow">Plan your visit</p><h2 class="h2" id="explore-h">Everything for your pilgrimage</h2></div>
+      <div class="xgrid" id="xgrid"></div>
+      <div class="sec-head"><h2>Top stays near the temple</h2><a href="rooms.html">See all hotels</a></div>
+      <div class="scroller" id="hStays"></div>
+      <div class="rbanner" id="rbanner"></div>
+      <div class="sec-head"><h2>Where to eat</h2><a href="food.html">See all</a></div>
+      <div class="scroller" id="hEats"></div>
+      <div class="sec-head"><h2>From the temple store</h2><a href="store.html">Shop all</a></div>
+      <div class="scroller deals" id="hShop"></div>
+    </div>
+  </section>
+
+  <section class="section section--tint" id="about">
+    <div class="container about">
+      <div class="section__head" style="margin-bottom:0;max-width:none">
+        <h2 class="h2">A temple of fire at the foot of Arunachala</h2>
+        <p class="lede">Arunachaleswarar Temple in Thiruvannamalai is one of the five Pancha Bhoota Sthalams, where Shiva is worshipped as fire. Pilgrims come for darshan, for the Karthigai Deepam lamp on the hilltop, and to walk the Girivalam path around the hill.</p>
+        <div class="facts" id="facts" style="margin-top:12px"></div>
+      </div>
+      <div id="aboutArt"></div>
+    </div>
+  </section>
+
+  <section class="section section--tint" id="girivalam">
+    <div class="container giri">
+      <div class="section__head" style="margin-bottom:0;max-width:none">
+        <h2 class="h2">Girivalam: 14 km around the sacred hill</h2>
+        <p class="lede">Walk clockwise from the temple, past the eight Ashta Lingams, and return to where you started. Most walkers need four to six hours.</p>
+        <div class="accordion" id="tips"></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+          <a class="btn btn--primary" href="map.html">Open offline map</a>
+          <a class="btn btn--soft" href="annadanam.html">Find Annadanam on the way</a>
+        </div>
+      </div>
+      <div class="panel">
+        <h3 class="h3" style="margin-bottom:6px">The eight lingams, in walking order</h3>
+        <p class="small muted" style="margin-bottom:12px">Clockwise from the east. Map positions are being verified.</p>
+        <ol class="route-list" id="stops"></ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="calendar">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="h2">Festival calendar</h2>
+        <p class="muted">Tap a day to see what is happening at the temple and in town. Icons mark special days.</p>
+      </div>
+      <div class="cal" id="cal"></div>
+    </div>
+  </section>
+
+  <section class="section" id="festival">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="h2">Festivals and announcements</h2>
+      </div>
+      <div class="festival">
+        <div class="fest-card">
+          <div class="datebox"><b id="fDay">24</b><span id="fMon">Nov</span></div>
+          <div style="display:grid;gap:6px">
+            <h3 class="h3">Karthigai Deepam</h3>
+            <p class="muted">The Maha Deepam is lit on top of the hill at dusk. Thousands of lamps are lit across the town.</p>
+            <p><span class="badge badge--gold" id="fCount">Tuesday, 24 November 2026</span></p>
+          </div>
+        </div>
+        <div>
+          <ul class="news" id="news"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="app-footer"></div>
+
+<script src="js/common.js"></script>
+<script src="js/art.js"></script>
+<script src="js/data.js"></script>
+<script src="js/data2.js"></script>
+<script src="js/shop.js"></script>
+<script src="js/events.js"></script>
+<script src="js/calendar.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
